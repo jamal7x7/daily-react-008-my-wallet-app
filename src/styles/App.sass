@@ -1,0 +1,143 @@
+$bg: #1D1C23
+$bgm: #062659
+$bgd: #041A3E
+$main: #EEE
+$purplish: #DB8EDA
+$blued: #073175
+$bluew: #5E85C3
+
+$grad:  linear-gradient(225deg, #DD8EDA 11%, #42A3F9 100%)
+
+$xxl: 50px
+$xl: 34px
+$l: 22px
+$m: 16px
+$s: 14px
+$xs: 11px
+
+
+$main-font: 'open sans', 'Lato', 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+
+body 
+  background: $bgd
+  font-family: $main-font
+  color: $main
+  
+ 
+
+.App-header 
+  height: 100px
+  padding: 20px
+  color: white
+  display: flex
+  justify-content: center
+  align-items: center
+
+
+
+.App-title 
+  font-size: 1.5em
+  text-align: center
+
+.app-win
+  width: 500px
+  // height: 900px
+  margin: 0 auto
+  background-color: $bgm
+  display: grid
+  grid-template-columns: aut
+  grid-template-rows: 70px 50px 180px 1fr 80px
+  grid-template-areas: ' . ' ' time-menu ' ' stats ' ' list ' ' add-btn ' 
+  
+  .time-menu
+    grid-area: time-menu
+    // border: 1px solid pink
+    font-size: $xs
+    font-weight: 600
+
+    display: grid
+    grid-auto-columns: 100px auto 100px
+    grid-auto-rows: auto
+    grid-template-areas: ' . ul . '
+    ul 
+      color: rgba($main, 0.3)
+      grid-area: ul 
+      list-style-type: none
+      display: flex
+      justify-content: space-between
+      cursor: pointer
+      transition: all 1 ease
+
+      li:hover:not(.active)
+        border-bottom: 2px solid rgba($main, 0.3)
+        color: rgba($main, 0.7)
+        
+    .active
+        color: $main
+
+
+  .stats
+    grid-area: stats
+    // border: 1px solid yellow
+    display: grid
+    grid-auto-columns: 50px 1fr 1fr 50px
+    grid-auto-rows: 110px 70px
+    grid-template-areas: ' . stats-num stats-graph . '  ' . today-date today-date . '
+    .stats-num
+      grid-area: stats-num
+      background: rgba($bgd, 0.3)
+
+    .stats-graph
+      grid-area: stats-graph
+      background: rgba($bgd, 0.7)
+
+    .today-date
+      grid-area: today-date
+      color: rgba($main, 0.3)
+      font-size: $xs
+      display: flex
+      justify-content: center
+      align-items: flex-end
+      
+
+
+  .list
+    grid-area: list
+    border: 1px solid pink
+    height: 300px
+  .add-btn
+    grid-area: add-btn
+    // border: 6px solid yellow
+    background-image: linear-gradient(225deg, rgba(#DD8EDA, 1) 10%, rgba(#42A3F9, 1) 100%) 
+    display: grid
+    grid-auto-columns: 1fr 1fr
+    grid-auto-rows: auto
+    grid-template-areas: ' add-income-btn add-expense-btn '
+    .add-income-btn
+      color: white  
+      grid-area: add-income-btn
+      border: none
+      background: rgba(#42A3F9, 0.2)
+      outline: none
+      cursor: pointer
+      h1 
+        margin: 0
+      p 
+        margin: 0
+        opacity: 0.4
+      
+    .add-expense-btn
+      color: white  
+      grid-area: add-expense-btn
+      border: none
+      background: rgba(#DD8EDA, 0.1) 
+      outline: none
+      cursor: pointer
+      h1 
+        margin: 0
+      p 
+        margin: 0
+        opacity: 0.4
+       
+
+    

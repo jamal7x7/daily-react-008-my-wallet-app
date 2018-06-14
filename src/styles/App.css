@@ -1,28 +1,137 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
+body {
+  background: #041A3E;
+  font-family: "open sans", "Lato", "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  color: #EEE;
 }
 
 .App-header {
-  background-color: #222;
-  height: 150px;
+  height: 100px;
   padding: 20px;
   color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .App-title {
   font-size: 1.5em;
+  text-align: center;
 }
 
-.App-intro {
-  font-size: large;
+.app-win {
+  width: 500px;
+  margin: 0 auto;
+  background-color: #062659;
+  display: grid;
+  grid-template-columns: aut;
+  grid-template-rows: 70px 50px 180px 1fr 80px;
+  grid-template-areas: ' . ' ' time-menu ' ' stats ' ' list ' ' add-btn ';
 }
 
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+.app-win .time-menu {
+  grid-area: time-menu;
+  font-size: 11px;
+  font-weight: 600;
+  display: grid;
+  grid-auto-columns: 100px auto 100px;
+  grid-auto-rows: auto;
+  grid-template-areas: ' . ul . ';
 }
+
+.app-win .time-menu ul {
+  color: rgba(238, 238, 238, 0.3);
+  grid-area: ul;
+  list-style-type: none;
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+  transition: all 1 ease;
+}
+
+.app-win .time-menu ul li:hover:not(.active) {
+  border-bottom: 2px solid rgba(238, 238, 238, 0.3);
+  color: rgba(238, 238, 238, 0.7);
+}
+
+.app-win .time-menu .active {
+  color: #EEE;
+}
+
+.app-win .stats {
+  grid-area: stats;
+  display: grid;
+  grid-auto-columns: 50px 1fr 1fr 50px;
+  grid-auto-rows: 110px 70px;
+  grid-template-areas: ' . stats-num stats-graph . '  ' . today-date today-date . ';
+}
+
+.app-win .stats .stats-num {
+  grid-area: stats-num;
+  background: rgba(4, 26, 62, 0.3);
+}
+
+.app-win .stats .stats-graph {
+  grid-area: stats-graph;
+  background: rgba(4, 26, 62, 0.7);
+}
+
+.app-win .stats .today-date {
+  grid-area: today-date;
+  color: rgba(238, 238, 238, 0.3);
+  font-size: 11px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.app-win .list {
+  grid-area: list;
+  border: 1px solid pink;
+  height: 300px;
+}
+
+.app-win .add-btn {
+  grid-area: add-btn;
+  background-image: linear-gradient(225deg, #dd8eda 10%, #42a3f9 100%);
+  display: grid;
+  grid-auto-columns: 1fr 1fr;
+  grid-auto-rows: auto;
+  grid-template-areas: ' add-income-btn add-expense-btn ';
+}
+
+.app-win .add-btn .add-income-btn {
+  color: white;
+  grid-area: add-income-btn;
+  border: none;
+  background: rgba(66, 163, 249, 0.2);
+  outline: none;
+  cursor: pointer;
+}
+
+.app-win .add-btn .add-income-btn h1 {
+  margin: 0;
+}
+
+.app-win .add-btn .add-income-btn p {
+  margin: 0;
+  opacity: 0.4;
+}
+
+.app-win .add-btn .add-expense-btn {
+  color: white;
+  grid-area: add-expense-btn;
+  border: none;
+  background: rgba(221, 142, 218, 0.1);
+  outline: none;
+  cursor: pointer;
+}
+
+.app-win .add-btn .add-expense-btn h1 {
+  margin: 0;
+}
+
+.app-win .add-btn .add-expense-btn p {
+  margin: 0;
+  opacity: 0.4;
+}
+/*# sourceMappingURL=App.css.map */
