@@ -26,7 +26,7 @@ const Stats = () => (
       <p>Balence</p>
       <div className='balence'>
 
-        <p className='balence-num'> <span>+</span> $2600.00</p>
+        <p className='balence-num'> <span>+</span> $2600.00 </p>
       </div>
       <div className='income-expense'>
         <p className='income-month'>+ $3600.00</p>
