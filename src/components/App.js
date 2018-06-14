@@ -21,7 +21,19 @@ const TimeMenu = () => (
 )
 const Stats = () => (
   <div className='stats'>
-    <div className='stats-num'>9098</div>
+    <div className='stats-num'>
+
+      <p>Balence</p>
+      <div className='balence'>
+
+        <p className='balence-num'> <span>+</span> $2600.00</p>
+      </div>
+      <div className='income-expense'>
+        <p className='income-month'>+ $3600.00</p>
+        <p className='expense-month'>- $1200.00</p>
+      </div>
+
+    </div>
     <div className='stats-graph'>5466464</div>
     <p className='today-date'>T7766R6RV65R68R5</p>
   </div>
